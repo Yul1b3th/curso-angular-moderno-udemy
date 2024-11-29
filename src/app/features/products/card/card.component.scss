@@ -1,0 +1,25 @@
+@tailwind components;
+
+@layer components {
+
+  .product-card {
+    @apply p-4 mt-2 mb-6 overflow-hidden shadow-none hover:shadow-md transition-shadow duration-300 text-slate-medium;
+  }
+
+  .product-image-link {
+    @apply relative block h-48 overflow-hidden rounded;
+  }
+
+  .product-image {
+    @apply w-full transition duration-500 transform hover:scale-105;
+  }
+
+  .product-category {
+    @apply mb-1 text-xs tracking-widest;
+  }
+
+  .product-title {
+    @apply py-4 text-lg font-medium text-slate-default;
+  }
+
+}

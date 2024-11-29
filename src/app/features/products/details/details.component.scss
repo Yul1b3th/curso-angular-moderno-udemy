@@ -1,0 +1,43 @@
+@tailwind components;
+
+@layer components {
+  .product-section {
+    @apply overflow-hidden text-slate-medium;
+  }
+
+  .product-container {
+    @apply container px-5 py-24 mx-auto;
+  }
+
+  .product-wrapper {
+    @apply flex flex-wrap mx-auto lg:w-4/5;
+  }
+
+  .product-image {
+    @apply object-cover object-center w-full h-64 rounded lg:w-1/2 lg:h-auto;
+  }
+
+  .product-details {
+    @apply w-full mt-6 lg:w-1/2 lg:pl-10 lg:py-6 lg:mt-0;
+  }
+
+  .product-category {
+    @apply text-sm tracking-widest;
+  }
+
+  .product-title {
+    @apply mb-1 text-3xl font-medium text-slate-default;
+  }
+
+
+  .product-reviews {
+    @apply flex items-center;
+  }
+
+
+  .product-description {
+    @apply mt-6 mb-5 leading-relaxed;
+  }
+
+
+}

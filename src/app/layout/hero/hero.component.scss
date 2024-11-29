@@ -1,0 +1,31 @@
+@tailwind components;
+
+@layer components {
+  .section-container {
+    @apply container mx-auto flex px-5 py-12 md:flex-row flex-col items-center;
+  }
+
+  .text-container {
+    @apply lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center;
+  }
+
+  .heading {
+    @apply max-w-xl text-[2.2rem] leading-none text-slate-900 font-extrabold font-sans text-center md:text-5xl lg:text-left lg:leading-tight mb-5;
+  }
+
+  .sub-heading {
+    @apply mb-8 leading-relaxed;
+  }
+
+  .btn-container {
+    @apply flex w-1/4;
+  }
+
+  .image-container {
+    @apply lg:max-w-lg lg:w-full md:w-1/2 w-5/6;
+  }
+
+  .image {
+    @apply object-cover object-center rounded;
+  }
+}

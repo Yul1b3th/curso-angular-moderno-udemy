@@ -1,0 +1,31 @@
+@tailwind components;
+
+@layer components {
+  .cta-section {
+    @apply max-w-6xl px-5 py-12 mx-auto;
+  }
+
+  .cta-container {
+    @apply relative w-full p-10 text-center text-white bg-yellow-600 md:p-16 rounded-3xl;
+  }
+
+  .cta-title {
+    @apply pb-3 text-3xl font-bold;
+  }
+
+  .cta-description {
+    @apply text-md;
+  }
+
+  .cta-form {
+    @apply relative flex items-center w-full max-w-xl mx-auto mt-6;
+  }
+
+  .cta-input {
+    @apply w-full px-4 py-4 bg-white border rounded-full outline-none text-gray-default focus:border focus:border-gray-100;
+  }
+
+  .cta-button {
+    @apply absolute flex items-center gap-2 px-4 py-2 bg-yellow-600 rounded-full cursor-pointer right-2;
+  }
+}

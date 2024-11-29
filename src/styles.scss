@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'ngx-toastr/toastr';
+
+@layer components {
+
+  button:disabled {
+    @apply cursor-not-allowed disabled:bg-primary-light;
+  }
+
+  .product-price {
+    @apply text-2xl font-bold text-primary-default;
+  }
+
+
+  .flex-space-between {
+    @apply flex items-center justify-between;
+  }
+
+  .input-primary {
+    @apply w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-primary-default;
+  }
+
+  .btn-primary {
+    @apply w-full px-6 py-4 leading-5 text-white transition-colors duration-200 transform bg-primary-default rounded-md hover:bg-primary-dark focus:outline-none focus:bg-primary-dark;
+  }
+
+}
+
+.toast-success {
+  background-color: #f97316 !important;
+}
+
+.toast-info {
+  background-color: #16a3f9 !important;
+}
+
+.toast-warning {
+  background-color: #f9c116 !important;
+}
+
+.toast-error {
+  background-color: #f91636 !important;
+}

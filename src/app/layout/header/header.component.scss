@@ -1,0 +1,55 @@
+@tailwind components;
+
+@layer components {
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .show-cart-animation {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+
+  .navbar {
+    @apply p-4 text-white bg-primary-default;
+  }
+
+  .nav-container {
+    @apply container mx-auto;
+  }
+
+  .nav-logo {
+    @apply text-lg font-bold;
+  }
+
+  .dropdown-menu {
+    @apply absolute hidden bg-white rounded-md shadow-md w-44 group-hover:block;
+  }
+
+  .dropdown-item {
+    @apply block px-4 py-2 text-sm capitalize text-slate-default hover:bg-slate-medium hover:text-white;
+  }
+
+  .cart-info {
+    @apply absolute right-0 px-1 text-lg font-bold text-white -top-1;
+  }
+
+  .cart-dropdown {
+    @apply absolute right-0 z-30 w-48 p-2 mt-2 text-white rounded-sm bg-slate-400;
+  }
+
+  .cart-total {
+    @apply flex justify-between py-3 font-light;
+  }
+
+  .border-divider {
+    @apply my-4 border-gray-lighter border-r;
+  }
+}

@@ -1,0 +1,16 @@
+@tailwind components;
+
+
+@layer components {
+  .product-container {
+    @apply container px-5 py-24 mx-auto;
+  }
+
+  .product-grid {
+    @apply flex flex-wrap -m-4;
+  }
+
+  .product-card {
+    @apply w-full p-4 lg:w-1/4 md:w-1/2;
+  }
+}

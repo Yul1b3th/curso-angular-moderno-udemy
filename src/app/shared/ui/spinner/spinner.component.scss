@@ -1,0 +1,11 @@
+  @tailwind components;
+
+  @layer components {
+    .flex-center {
+      @apply flex justify-center items-center min-h-screen;
+    }
+
+    .spinner {
+      @apply animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-primary-default;
+    }
+  }

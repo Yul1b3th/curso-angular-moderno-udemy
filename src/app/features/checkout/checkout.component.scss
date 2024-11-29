@@ -1,0 +1,56 @@
+@tailwind components;
+
+@layer components {
+  .custom-container-lg {
+    @apply w-full mx-auto overflow-auto lg:w-2/3;
+  }
+
+  .custom-flex-col {
+    @apply flex flex-col w-full mb-20 text-center;
+  }
+
+  .custom-heading {
+    @apply mb-2 text-3xl font-medium text-gray-default sm:text-4xl;
+  }
+
+  .btn {
+    @apply flex px-8 py-2 text-lg text-white bg-primary-default border-0 rounded focus:outline-none hover:bg-red-600;
+  }
+
+  .custom-table {
+    @apply w-full text-left whitespace-nowrap table-auto;
+  }
+
+  .custom-table-header {
+    @apply px-2 py-3 text-sm font-medium tracking-wider text-gray-default bg-gray-100 rounded-tl rounded-bl;
+  }
+
+  .custom-table-cell-price {
+    @apply py-3 text-lg font-semibold text-gray-default;
+  }
+
+  .custom-remove-product {
+    @apply flex items-center px-2 py-1 pl-0 space-x-2 text-primary-default cursor-pointer;
+  }
+
+  .custom-pay-button {
+    @apply flex px-8 py-2 text-white bg-primary-default border-0 rounded focus:outline-none hover:bg-primary-dark;
+  }
+
+  .custom-empty-cart-heading {
+    @apply my-2 text-3xl font-medium text-gray-default sm:text-4xl;
+  }
+
+  .custom-flex-item {
+    @apply flex items-center px-2 py-1 pl-0 space-x-2 text-primary-default cursor-pointer;
+  }
+
+  .custom-table-cell-total {
+    @apply py-3 text-lg not-italic font-bold text-gray-default;
+  }
+
+  .custom-flex-end {
+    @apply flex justify-end w-full;
+  }
+
+}

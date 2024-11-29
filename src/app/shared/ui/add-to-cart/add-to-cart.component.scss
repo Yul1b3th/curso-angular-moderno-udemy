@@ -1,0 +1,8 @@
+@tailwind components;
+
+
+@layer components {
+  .btn {
+    @apply px-2 py-1 text-white bg-primary-default rounded hover:bg-primary-dark;
+  }
+}
