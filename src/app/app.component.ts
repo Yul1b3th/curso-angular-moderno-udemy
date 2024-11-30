@@ -8,6 +8,7 @@ import HeroComponent from '@layout/hero/hero.component';
 import { SpinnerComponent } from '@shared/ui/spinner/spinner.component';
 import { filter } from 'rxjs';
 import { CartStateService } from 'src/app/store/cart-state/cart-state.service';
+import { TaskListComponent } from '../signals/task-list.component';
 
 @Component({
   standalone: true,
@@ -19,6 +20,7 @@ import { CartStateService } from 'src/app/store/cart-state/cart-state.service';
     SpinnerComponent,
     FooterComponent,
     AsyncPipe,
+    TaskListComponent,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
