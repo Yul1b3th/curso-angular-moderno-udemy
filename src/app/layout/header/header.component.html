@@ -1,3 +1,4 @@
+@if (cart(); as cart) {
 <nav class="navbar">
   <div class="nav-container flex-space-between">
     <a routerLink="/" class="nav-logo">DOMINISTORE</a>
@@ -35,17 +36,17 @@
               fill-rule="evenodd"
             />
           </svg>
-          @if (cart?.productsCount) {
-          <span class="cart-info">{{ cart?.productsCount }}</span>
+          @if (cart.productsCount) {
+          <span class="cart-info">{{ cart.productsCount }}</span>
           }
         </a>
 
-        @if (showCart && cart?.productsCount) {
+        @if (showCart && cart.productsCount) {
         <div
           [ngClass]="{ 'show-cart-animation': showCart }"
           class="cart-dropdown"
         >
-          @for (product of cart?.products; track product.id) {
+          @for (product of cart.products; track product.id) {
           <div class="flex-space-between">
             <span
               >{{ product.quantity }} {{ product.title | slice : 0 : 10 }}</span
@@ -57,7 +58,7 @@
           <div class="cart-total">
             Total:
             <span class="not-italic font-bold">
-              {{ cart?.totalAmount | currency }}</span
+              {{ cart.totalAmount | currency }}</span
             >
           </div>
         </div>
@@ -66,3 +67,4 @@
     </div>
   </div>
 </nav>
+}

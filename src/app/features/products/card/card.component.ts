@@ -3,6 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   EventEmitter,
+  input,
   Input,
   Output,
 } from '@angular/core';
@@ -20,10 +21,11 @@ import { AddToCartComponent } from '@shared/ui/add-to-cart/add-to-cart.component
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  @Input({ required: true }) product!: Product;
+  // @Input({ required: true }) product!: Product;
+  currentProduct = input.required<Product>({ alias: 'product' });
   @Output() addToCartEvent = new EventEmitter<Product>();
 
   onAddToCart(): void {
-    this.addToCartEvent.emit(this.product);
+    this.addToCartEvent.emit(this.currentProduct());
   }
 }
