@@ -1,5 +1,4 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { toObservable } from '@angular/core/rxjs-interop';
 import { Product } from '@features/products/product.interface';
 import { ToastrService } from 'ngx-toastr';
 import { CartCalculatorService } from 'src/app/store/cart-state/cart-calculator.service';
@@ -36,8 +35,6 @@ export class CartStateService {
     productsCount: this.productsCount(),
     totalAmount: this.totalAmount(),
   }));
-
-  cart$ = toObservable(this.cartStore);
 
   addToCart(product: Product): void {
     const currentProducts = this._products();
