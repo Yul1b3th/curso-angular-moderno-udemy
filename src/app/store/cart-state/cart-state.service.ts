@@ -70,17 +70,26 @@ export class CartStateService {
   }
 
   removeFromCart(productId: number): void {
-    const currentState = this._cartState.getValue();
-    const updatedProducts = currentState.products.filter(
-      (p) => p.id !== productId
-    );
-    this.updateState({
-      products: updatedProducts,
-      totalAmount: this._cartCalculatorService.calculateTotal(updatedProducts),
-      productsCount:
-        this._cartCalculatorService.calculateItemsCount(updatedProducts),
-    });
-    this._toastrService.success('Product removed!!', 'DOMINI STORE');
+    try {
+      if (!productId) {
+        throw new Error('Invalid Product ID');
+      }
+      const currentProducts = this._products();
+      const productExists = currentProducts.some(
+        (product: Product) => product.id === productId
+      );
+      if (!productExists) {
+        this._toastrService.warning('Product not found in cart!');
+        return;
+      }
+      this._products.update((products: Product[]) =>
+        products.filter((product: Product) => product.id !== productId)
+      );
+      this._toastrService.success('Product removed!!', 'DOMINI STORE');
+    } catch (error) {
+      console.error('Error removing product', error);
+      this._toastrService.error('Error removing product', 'DOMINI STORE');
+    }
   }
 
   clearCart(): void {
