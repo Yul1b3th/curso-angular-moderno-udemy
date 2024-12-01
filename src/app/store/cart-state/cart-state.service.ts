@@ -93,7 +93,7 @@ export class CartStateService {
   }
 
   clearCart(): void {
-    this.updateState(initialCartState);
+    this._products.set([]);
     this._toastrService.success('All Products removed!', 'DOMINI STORE');
   }
 }
